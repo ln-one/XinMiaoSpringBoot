@@ -1,4 +1,4 @@
-# 🌱 新苗校园系统
+# 🌱 新苗校园学生系统
 
 > 🎨 前端项目：[XinMiaoPlatformVue](https://github.com/ln-one/XinMiaoPlatformVue)
 
