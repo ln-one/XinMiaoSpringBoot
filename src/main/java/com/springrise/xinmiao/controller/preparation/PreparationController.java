@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -70,6 +72,20 @@ public class PreparationController {
             @RequestParam String studentType) {
         return ApiResponse.success(
             documentChecklistService.getChecklistByType(studentType)
+        );
+    }
+
+    @Operation(summary = "验证文件清单")
+    @PostMapping("/documents/verify")
+    @PreAuthorize("hasRole('FRESHMAN')")
+    public ApiResponse<Boolean> verifyDocuments(
+            @Parameter(hidden = true) @RequestHeader("Authorization") String token,
+            @RequestBody List<String> documentIds) {
+        return ApiResponse.success(
+            documentChecklistService.verifyDocuments(
+                jwtTokenUtil.extractUsername(token.replace("Bearer ", "")),
+                documentIds
+            )
         );
     }
 

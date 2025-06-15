@@ -12,7 +12,7 @@ import com.springrise.xinmiao.service.preparation.TransportationService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/preparation/transport")
+@RequestMapping("/api/transport")
 @RequiredArgsConstructor
 public class TransportationController {
 
