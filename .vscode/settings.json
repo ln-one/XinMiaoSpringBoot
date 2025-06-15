@@ -1,0 +1,5 @@
+{
+    "java.compile.annotationProcessing.enabled": true,
+    "java.compile.annotationProcessorPath": "path/to/lombok.jar" 
+    // 通常不需要手动指定路径，除非遇到特殊问题
+}

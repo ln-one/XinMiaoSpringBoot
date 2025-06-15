@@ -1,0 +1,9 @@
+<!-- src/main/resources/mapper/LuggageTemplateMapper.xml -->
+<mapper namespace="com.springrize.xinmiao.repository.mapper.LuggageTemplateMapper">
+    <select id="selectByConditions" resultType="LuggageTemplate">
+        SELECT * FROM luggage_template
+        WHERE climate_zone = #{climateZone}
+        AND major_category = #{majorCategory}
+        ORDER BY priority DESC
+    </select>
+</mapper>
