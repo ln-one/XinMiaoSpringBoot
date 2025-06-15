@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # 🌱 新苗校园引导系统
+=======
+# 🌱 新苗校园学生系统
+>>>>>>> 80d4fdc971b282fc9586f02f2b0801526fe562b4
 
 > 🎨 前端项目：[XinMiaoPlatformVue](https://github.com/ln-one/XinMiaoPlatformVue)
 
